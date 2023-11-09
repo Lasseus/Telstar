@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RoutePlanning.Application.Locations.Commands.CreateTwoWayConnection;
+using RoutePlanning.Application.Locations.Queries.DeliveryInfo;
 using RoutePlanning.Client.Web.Authorization;
 
 namespace RoutePlanning.Client.Web.Api;
@@ -28,5 +29,11 @@ public sealed class RoutesController : ControllerBase
     public async Task AddTwoWayConnection(CreateTwoWayConnectionCommand command)
     {
         await _mediator.Send(command);
+    }
+
+    [HttpGet("[action]")]
+    public async Task<DeliveryInfo> GetDeliveryInfo(DeliveryInfoQuery query)
+    {
+        return await _mediator.Send(query);
     }
 }
