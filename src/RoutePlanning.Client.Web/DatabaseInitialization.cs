@@ -26,6 +26,7 @@ public static class DatabaseInitialization
 
     private static async Task SeedLocationsAndRoutes(RoutePlanningDatabaseContext context)
     {
+        // OLD LOCATIONS:
         var berlin = new Location("Berlin");
         await context.AddAsync(berlin);
 
@@ -38,10 +39,15 @@ public static class DatabaseInitialization
         var warsaw = new Location("Warsaw");
         await context.AddAsync(warsaw);
 
+        // OUR LOCATIONS:
+
+        // OLD CONNECTIONS:
         CreateTwoWayConnection(berlin, warsaw, 573);
         CreateTwoWayConnection(berlin, copenhagen, 763);
         CreateTwoWayConnection(berlin, paris, 1054);
         CreateTwoWayConnection(copenhagen, paris, 1362);
+
+        // OUR CONNECTIONS:
     }
 
     private static async Task SeedUsers(RoutePlanningDatabaseContext context)
