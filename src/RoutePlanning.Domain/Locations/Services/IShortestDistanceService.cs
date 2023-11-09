@@ -4,5 +4,5 @@ namespace RoutePlanning.Domain.Locations.Services;
 
 public interface IShortestDistanceService : IDomainService
 {
-    int CalculateShortestDistance(Location source, Location target);
+    public Task<int> CalculateShortestDistance(Location source, Location target, RouteType type, Parcel parcel);
 }

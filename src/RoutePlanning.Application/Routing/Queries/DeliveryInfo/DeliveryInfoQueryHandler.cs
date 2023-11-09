@@ -29,7 +29,7 @@ public sealed class DeliveryInfoQueryhandler : IQueryHandler<DeliveryInfoQuery, 
         return new DeliveryInfo(time, totalCost);
     }
 
-    private static double GetTotalSegmentCost(DeliveryInfoQuery query, double baseCost)
+    public static double GetTotalSegmentCost(DeliveryInfoQuery query, double baseCost)
     {
         var recordedDeliveryIncrease = query.Types.Contains(PacketInfo.RecordedDelivery) ? 10 : 0;
         var liveAnimalsIncrease = query.Types.Contains(PacketInfo.LiveAnimals) ? baseCost * PacketInfo.LiveAnimalsMultiplier : 0;

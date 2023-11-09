@@ -1,5 +1,6 @@
-﻿namespace RoutePlanning.Application;
-internal static class PacketInfo
+﻿namespace RoutePlanning.Domain.Locations;
+
+public static class PacketInfo
 {
     public static readonly string RecordedDelivery = "Recorded Delivery";
     public static readonly string Weapons = "Weapons";

@@ -11,4 +11,33 @@ public sealed record Parcel : IValueObject
     public bool RefigeratedGoods { get; set; }
     public double Weight { get; set; }
     public bool Signed { get; set; }
+    public List<string> GenerateTypesFromParcel()
+    {
+        var retList = new List<string>();
+        if (LiveAnimals)
+        {
+            retList.Add(PacketInfo.LiveAnimals.ToString());
+
+        }
+
+        if (CautiousParcels)
+        {
+            retList.Add(PacketInfo.CautiousParcels.ToString());
+
+        }
+
+        if (RefigeratedGoods)
+        {
+            retList.Add(PacketInfo.RefrigeratedGoods.ToString());
+
+        }
+
+        if (Signed)
+        {
+            retList.Add(PacketInfo.RecordedDelivery.ToString());
+
+        }
+
+        return retList;
+    }
 }
