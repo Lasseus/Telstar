@@ -10,7 +10,7 @@ namespace RoutePlanning.Client.Web;
 
 public sealed class Program
 {
-    public static async Task Main(string[] args)
+    public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +31,7 @@ public sealed class Program
 
         var app = builder.Build();
 
-        await DatabaseInitialization.SeedDatabase(app);
+        // await DatabaseInitialization.SeedDatabase(app);
 
         if (app.Environment.IsProduction())
         {
@@ -49,5 +49,6 @@ public sealed class Program
         app.MapFallbackToPage("/_Host");
 
         app.Run();
+
     }
 }
