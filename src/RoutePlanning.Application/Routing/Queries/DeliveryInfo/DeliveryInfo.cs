@@ -3,4 +3,4 @@ using RoutePlanning.Domain.Locations;
 
 namespace RoutePlanning.Application.Locations.Queries.DeliveryInfo;
 
-public sealed record DeliveryInfo(int Time, double Cost);
+public sealed record DeliveryInfo(int Time, double Price);
