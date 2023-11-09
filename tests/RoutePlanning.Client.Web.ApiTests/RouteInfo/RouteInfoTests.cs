@@ -25,7 +25,7 @@ public class RouteInfoTests : IClassFixture<RoutePlanningApplicationFactory>
         var url = _factory.GetRoute<Program, RoutesController>(x => x.GetDeliveryInfo);
 
         // Act
-        var deliveryInfoQuery = new DeliveryInfoQuery("Berlin", "Warsaw", new List<string>(), 23);
+        var deliveryInfoQuery = new DeliveryInfoQuery("TANGER", "TUNIS", new List<string>() { "Recorded Delivery"}, 23);
         var request = new HttpRequestMessage(HttpMethod.Get, url);
         request.Content = new StringContent(JsonSerializer.Serialize(deliveryInfoQuery), Encoding.UTF8, "application/json");
         request.Headers.Add("Token", "TheSecretApiToken");
