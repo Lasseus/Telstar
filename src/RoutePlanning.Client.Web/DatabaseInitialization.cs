@@ -134,6 +134,7 @@ public static class DatabaseInitialization
         CreateTwoWayConnection(copenhagen, paris, 1362);
 
         // OUR CONNECTIONS:
+        CreateTwoWayConnection(tanger, tunis, 5);
     }
 
     private static async Task SeedUsers(RoutePlanningDatabaseContext context)
