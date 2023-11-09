@@ -27,17 +27,17 @@ public static class DatabaseInitialization
     private static async Task SeedLocationsAndRoutes(RoutePlanningDatabaseContext context)
     {
         // OLD LOCATIONS:
-        var berlin = new Location("Berlin");
-        await context.AddAsync(berlin);
+        //var berlin = new Location("Berlin");
+        //await context.AddAsync(berlin);
 
-        var copenhagen = new Location("Copenhagen");
-        await context.AddAsync(copenhagen);
+        //var copenhagen = new Location("Copenhagen");
+        //await context.AddAsync(copenhagen);
 
-        var paris = new Location("Paris");
-        await context.AddAsync(paris);
+        //var paris = new Location("Paris");
+        //await context.AddAsync(paris);
 
-        var warsaw = new Location("Warsaw");
-        await context.AddAsync(warsaw);
+        //var warsaw = new Location("Warsaw");
+        //await context.AddAsync(warsaw);
 
         // OUR LOCATIONS:
         var tanger = new Location("TANGER");

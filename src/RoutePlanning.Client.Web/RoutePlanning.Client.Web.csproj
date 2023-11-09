@@ -8,6 +8,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="6.0.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Netcompany.Net.ErrorHandling.AspNetCore" Version="1.0.0" />
     <PackageReference Include="Netcompany.Net.Logging.Serilog" Version="1.0.1" />
     <PackageReference Include="Netcompany.Net.UnitOfWork.Cqs" Version="1.0.1" />
