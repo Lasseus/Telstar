@@ -25,4 +25,14 @@ public sealed class Connection : Entity<Connection>
     public Location Destination { get; private set; }
 
     public Distance Distance { get; private set; }
+
+    public double GetConnectionCostDollars()
+    {
+        return Distance * 3;
+    }
+
+    public int GetConnectionTimeHours()
+    {
+        return Distance * 4;
+    }
 }
