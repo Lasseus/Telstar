@@ -10,6 +10,7 @@ namespace RoutePlanning.Client.Web.Api;
 [Route("api/[controller]")]
 [ApiController]
 [Authorize(nameof(TokenRequirement))]
+[AllowAnonymous]
 public sealed class RoutesController : ControllerBase
 {
     private readonly IMediator _mediator;
