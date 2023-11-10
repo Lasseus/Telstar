@@ -3,7 +3,7 @@ using Netcompany.Net.DomainDrivenDesign.Models;
 
 namespace RoutePlanning.Domain.Locations;
 
-[DebuggerDisplay("{Value} km")]
+[DebuggerDisplay("{Value} h")]
 public sealed record Route : IValueObject
 {
     public float Cost { get; set; }

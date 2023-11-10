@@ -3,7 +3,7 @@ using Netcompany.Net.DomainDrivenDesign.Models;
 
 namespace RoutePlanning.Domain.Locations;
 
-[DebuggerDisplay("{Value} km")]
+[DebuggerDisplay("{Value} h")]
 public sealed record Distance : IValueObject
 {
     public Distance(int value)
