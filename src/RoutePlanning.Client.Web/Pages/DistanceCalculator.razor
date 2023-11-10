@@ -1,30 +1,30 @@
 ﻿@page "/"
 
-<PageTitle>Distance Calculator</PageTitle>
+<PageTitle>Telestar Logistics</PageTitle>
 
-<h1>Distance Calculator</h1>
+<h1>Kikokotoo cha Umbali</h1>
 
 <div style="display: flex; justify-content: space-between;">
     <div style="width: 45%;">
-        <LocationSelector Label="Source" Locations="@Locations" @bind-Selected="SelectedSource"></LocationSelector>
-        <LocationSelector Label="Destination" Locations="@Locations" @bind-Selected="SelectedDestination"></LocationSelector>
+        <LocationSelector Label="Kutoka" Locations="@Locations" @bind-Selected="SelectedSource"></LocationSelector>
+        <LocationSelector Label="Kwa" Locations="@Locations" @bind-Selected="SelectedDestination"></LocationSelector>
 
 
         <br />
         <div>
-            <label for="weight">Weight:</label><br />
-            <input type="number" name="Weight" value="" />kg
+			<label for="weight">Uzito</label><br />
+            <input type="number" name="weight" value="" />kg
         </div>
 
         <br />
 
         <div style="display: flex; align-items: center;">
-            <input name="Signed" type="checkbox" value="Signed" />   Signed<br />
+            <input name="Signed" type="checkbox" value="Signed" />   Imetiwa saini<br />
 
             <div class="circle">
                 i
                 <span class="hover-text">
-                    The prices for a sign package is 1 517,50 KES.
+					Bei za kifurushi cha ishara ni 1 517,50 KES.
                 </span>
             </div>
         </div>
@@ -32,19 +32,19 @@
 
         <div style="display: flex; align-items: center;">
             <select>
-                <option value="standard">Standard</option>
-                <option value="liveAnimals">Live animals</option>
-                <option value="cautiousParcels ">Cautious parcels</option>
-                <option value="refrigeratedGoods">Refrigerated goods</option>
+				<option value="standard">Kawaida</option>
+				<option value="liveAnimals">Wanyama hai</option>
+				<option value="cautiousParcels ">Vifurushi vya tahadhari</option>
+				<option value="refrigeratedGoods">Bidhaa za friji</option>
             </select>
 
             <div class="circle">
                 i
                 <span class="hover-text">
-                    The prices changes depending on the type <br />
-                    Live animals 	+50% <br />
-                    Cautious parcels 	+75%  <br />
-                    Refrigerated goods 	+10%  <br />
+					Bei hubadilika kulingana na aina <br />
+					Wanyama hai 	+50% <br />
+					Vifurushi vya tahadhari 	+75%  <br />
+					Bidhaa za friji 	+10%  <br />
                 </span>
             </div>
         </div>
@@ -66,7 +66,7 @@
 </div>
 
 <br />
-<button class="confirmation-button" @onclick="CalculateDistance">Calculate</button>
+<button class="confirmation-button" @onclick="CalculateDistance">Kokotoa</button>
 
 <br />
 <br />
