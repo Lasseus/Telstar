@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Mvc;
 using RoutePlanning.Application.Locations.Queries.Distance;
 using RoutePlanning.Application.Locations.Queries.SelectableLocationList;
 
@@ -13,6 +14,7 @@ public sealed partial class DistanceCalculator
     private string? DisplaySource { get; set; }
     private string? DisplayDestination { get; set; }
     private int? DisplayDistance { get; set; }
+    private int Weight { get; set; }
 
     [Inject]
     private IMediator Mediator { get; set; } = default!;
@@ -24,7 +26,7 @@ public sealed partial class DistanceCalculator
 
     private async Task CalculateDistance()
     {
-        if (SelectedSource is not null && SelectedDestination is not null)
+        if (SelectedSource is not null && SelectedDestination is not null && Weight < 41 && Weight > -1)
         {
             DisplaySource = SelectedSource.Name;
             DisplayDestination = SelectedDestination.Name;

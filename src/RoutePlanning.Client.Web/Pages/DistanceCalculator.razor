@@ -1,4 +1,6 @@
 ﻿@page "/"
+@using NpgsqlTypes
+@using Microsoft.AspNetCore.Mvc.Rendering
 
 <PageTitle>Telstar Logistics</PageTitle>
 
@@ -12,8 +14,8 @@
 
         <br />
         <div>
-			<label for="weight">Uzito</label><br />
-            <input type="number" name="weight" value="" />kg
+			<label asp-for="Weight">Uzito</label>
+			<input name="Weight" type="number" @bind="Weight" /> kg
         </div>
 
         <br />
